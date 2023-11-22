@@ -6,6 +6,7 @@ export default function handler(req, res) {
   if (ip === '::1' || ip.startsWith('::ffff:')) {
     ip = '127.0.0.1';
   }
+  console.log(`remote ${ip}`);
 
   // IPアドレスをJSON形式で返す
   res.status(200).json({ ip: ip });
