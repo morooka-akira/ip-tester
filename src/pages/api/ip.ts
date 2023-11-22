@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+export default function handler(req: any, res: any) {
   // リクエストからIPアドレスを取得
   let ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   
